@@ -19,7 +19,7 @@ function forEach(array, callback) {
 function map(array, callback) {
     const newArray = [];
     for (let i = 0; i < array.length; i++) {
-      newArray.push(array[i]);
+      newArray[i] = array[i];
     }
     return newArray;
 }
