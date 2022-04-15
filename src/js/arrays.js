@@ -19,7 +19,7 @@ function forEach(array, callback) {
 function map(array, callback) {
     const newArray = [];
     for (let i = 0; i < array.length; i++) {
-       newArray[i] = callback (array[i], i, array);
+      newArray.push(array[i]);
     }
     return newArray;
 }
@@ -53,7 +53,7 @@ function filter(array, callback) {
 function reduce(array, callback, initialValue) {
     let result = 0;
     for (let i = 0; i < array.length; i++) {
-      result += callback (initialValue, array[i], i, array);
+      result = callback (initialValue, array[i], i, array);
     }
     return result;
 }
